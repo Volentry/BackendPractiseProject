@@ -1,4 +1,4 @@
-class APIResponce extends response{
+class APIResponce extends Response{
     constructor(statusCode,
         message="success",
         data){
@@ -9,5 +9,7 @@ class APIResponce extends response{
 
     }
 }
+
+export default APIResponce
 
 // learn about all the files in utils briefly from chatgpt or DOCS
