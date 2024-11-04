@@ -18,4 +18,11 @@ app.use(express.urlencoded({ //for url
 app.use(express.static("public"))  //for images
 app.use(cookieParser()) // for cookies
 
+//routes import
+
+import userRouter from './routes/user.router.js'
+
+//routes declaration
+app.use('/api/v1/user',userRouter)
+
 export {app}
