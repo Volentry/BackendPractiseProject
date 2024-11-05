@@ -2,6 +2,7 @@ class APIResponce extends Response{
     constructor(statusCode,
         message="success",
         data){
+            super()
             this.statusCode=statusCode,
             this.data=data,
             this.message=message

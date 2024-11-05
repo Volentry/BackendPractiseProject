@@ -1,6 +1,5 @@
 import {v2 as cloudinary} from 'cloudinary'
 import fs from 'fs'
-import { loadEnvFile } from 'process'
 
 cloudinary.config({
     cloud_name:process.env.CLOUD_NAME,
@@ -16,11 +15,12 @@ const uploadONCloudinary = async function (localFilePath) {
         //upload on cloudinary
        const response = await cloudinary.uploader.upload(localFilePath,{
             resource_type:"auto"
-
+  
         })
 
+
         console.log("file uploaded on cloudinary",response.url)
-        return responce
+        return response
         
     } catch (error) {
         //to delete corrupted files
